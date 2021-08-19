@@ -1,0 +1,17 @@
+@use '/src/styles/animations.scss' as animations;
+
+.fadeInAnimation {
+  @include animations.fade-in;
+}
+
+.fadeOutAnimation {
+  @include animations.fade-out;
+}
+
+.leftToRight {
+  @include animations.slide(-100%, 0);
+}
+
+.rightToLeft {
+  @include animations.slide(100%, 0);
+}

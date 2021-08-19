@@ -1,0 +1,19 @@
+@mixin variableSetup {
+  width: var(--width) !important;
+  height: var(--height) !important;
+  max-width: var(--width) !important;
+  min-width: var(--width) !important;
+  padding: var(--padding) !important;
+  background-color: var(--backgroundColor) !important;
+  border-color: var(--borderColor) !important;
+}
+
+.customButton {
+  @include variableSetup();
+  @media screen and (min-width: 25rem) {
+    @include variableSetup();
+  }
+  @media screen and (min-width: 45rem) {
+    @include variableSetup();
+  }
+}

@@ -1,0 +1,172 @@
+@use "/src/styles/constants/typography/typography-mixins.scss" as mixin;
+@use "/src/styles/constants/color/color-variables.scss" as colors;
+@use "/src/styles/constants//typography/typography-variables.scss" as typography;
+
+.inputWrapper {
+  width: auto;
+  & input {
+    @include mixin.IDS_TYPOGRAPHY_FontFamily_Sans;
+    font-size: typography.$size-font-18;
+
+    background-color: colors.$color-lightestBeige-background;
+    border: none;
+    color: rgba(colors.$color-text-brown, 0.9);
+    max-width: fit-content;
+    flex-wrap: wrap;
+  }
+  // & input[type="datetime-local"] {
+  //     background-color: red;
+  //     width: fit-content;
+  // }
+  // & > input[type="datetime-local"]::-webkit-inner-spin-button,
+  // & > input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  //     display: none;
+  //     background: none;
+  // }
+  & > input[type="datetime-local"] {
+    margin: auto;
+    padding: 0;
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 10px;
+      margin-right: 0px;
+      display: none;
+    }
+    &::-webkit-datetime-edit {
+      margin: 0 auto;
+      margin-right: -10px;
+      padding-left: 4px;
+      padding-right: 4px;
+      width: auto;
+      block-size: auto;
+    }
+    // &::-webkit-datetime-edit-year-field {
+    // }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    // }
+    // &::-webkit-datetime-edit-text {
+    // }
+    // &::-webkit-clear-button {
+    // }
+  }
+
+  & > input[type="date"] {
+    margin: auto;
+    padding: 0;
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 10px;
+      margin-right: 0px;
+      display: none;
+    }
+    &::-webkit-datetime-edit {
+      margin: 0 auto;
+      padding-left: 4px;
+      padding-right: 4px;
+      width: auto;
+      block-size: auto;
+    }
+    // &::-webkit-datetime-edit-year-field {
+    // }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    // }
+    // &::-webkit-datetime-edit-text {
+    // }
+    // &::-webkit-clear-button {
+    // }
+  }
+  & > input[type="time"] {
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    &::-webkit-datetime-edit {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    // }
+    // &::-webkit-datetime-edit-text {
+    // }
+    // &::-webkit-clear-button {
+    // }
+  }
+}
+
+.customDateInput {
+  width: auto;
+  // & input {
+  //     // This font messes with the input size of the field
+  //     @include fontFamilySans;
+  //     //
+  //     font-size: $font-size-18;
+  //     background-color: $color-lightestBeige-background;
+  //     border: none;
+  //     color: rgba($color-brown-text, 0.9);
+  //     width: auto;
+  // }
+  & > input[type="datetime-local"] {
+    margin: auto;
+    padding: 0;
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 10px;
+      margin-right: 0px;
+      display: none;
+    }
+    &::-webkit-datetime-edit {
+      margin: 0 auto;
+      margin-right: -10px;
+      padding-left: 4px;
+      padding-right: 4px;
+      // background-color: red;
+      width: auto;
+      block-size: auto;
+    }
+    // &::-webkit-datetime-edit-year-field {
+    // }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    // }
+    // &::-webkit-datetime-edit-text {
+    // }
+    // &::-webkit-clear-button {
+    // }
+  }
+
+  & > input[type="date"] {
+    margin: auto;
+    padding: 0;
+    &::-webkit-calendar-picker-indicator {
+      margin-left: 10px;
+      margin-right: 0px;
+      display: none;
+    }
+    &::-webkit-datetime-edit {
+      margin: 0 auto;
+      padding-left: 4px;
+      padding-right: 4px;
+      // background-color: red;
+      width: auto;
+      block-size: auto;
+    }
+    // &::-webkit-datetime-edit-year-field {
+    // }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    // }
+    // &::-webkit-datetime-edit-text {
+    // }
+    // &::-webkit-clear-button {
+    // }
+  }
+  & > input[type="time"] {
+    &::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    &::-webkit-datetime-edit {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    // &::-webkit-datetime-edit-fields-wrapper {
+    // }
+    // &::-webkit-datetime-edit-text {
+    // }
+    // &::-webkit-clear-button {
+    // }
+  }
+}

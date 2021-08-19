@@ -1,0 +1,11 @@
+.skipContent {
+  display: block;
+  position: absolute !important;
+  left: -999px;
+  top: -999px;
+}
+.skipContent:focus {
+  left: 0;
+  top: 0;
+  padding: 3px;
+}

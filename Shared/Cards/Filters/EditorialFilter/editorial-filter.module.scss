@@ -1,0 +1,55 @@
+@use "/src/styles/constants/color/color-variables.scss" as colors;
+@use "/src/styles/constants/typography/typography-variables.scss" as typography;
+
+.container {
+  width: auto;
+  height: auto;
+}
+
+.barContainer {
+  width: auto;
+  height: auto;
+  margin: 0px;
+  padding: 24px 40px;
+  background-color: colors.$color-lightestBeige-background;
+  display: flex;
+  flex-grow: 1;
+}
+
+.title {
+  width: auto;
+  height: auto;
+  margin: 3px 470px 2px 0;
+  font-family: typography.$font-family-sans;
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.18;
+  letter-spacing: normal;
+  text-align: left;
+  color: colors.$color-text-brown;
+}
+
+.filterButtons {
+  width: 100%;
+}
+
+.resultField {
+  width: 227px;
+  height: 22px;
+  margin: 16px 53px 339px 0;
+  font-family: typography.$font-family-sans;
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: colors.$color-text-light-brown;
+
+  > :first-child {
+    font-weight: bold;
+  }
+}

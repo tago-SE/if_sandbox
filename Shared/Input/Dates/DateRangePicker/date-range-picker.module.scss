@@ -1,0 +1,77 @@
+@use "/src/styles/constants/color/color-variables.scss" as colors;
+@use "/src/styles/constants/typography/typography-variables.scss" as typography;
+@use "/src/styles/constants/typography/typography-mixins.scss" as mixin;
+
+.componentWrapper {
+  display: block;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0rem;
+  padding: 0.5rem;
+  @include mixin.IDS_TYPOGRAPHY_FontFamily_Sans;
+  font-size: typography.$size-font-18;
+  background-color: colors.$color-lightestBeige-background;
+
+  border: 1px solid colors.$color-text-light-brown;
+  color: rgba(colors.$color-text-light-brown, 0.9);
+  max-width: fit-content;
+  flex-wrap: wrap;
+}
+
+.pickerTypeToggleButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem;
+  width: auto;
+  height: auto;
+}
+
+.dateTimeRangePickerBody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(392px, 1fr)) !important;
+  border: 2px solid colors.$color-lightBeige-background;
+  background-color: colors.$color-lightestBeige-background;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf9f7;
+  z-index: 1000;
+  width: auto;
+  padding: 10px;
+  grid-column: 1 / -1;
+
+  @media screen and (max-width: 45rem) {
+    flex-direction: column;
+  }
+}
+
+.footerItem {
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+}
+
+.dateTimeRangePickerItem {
+  height: fit-content !important;
+  min-height: 400px;
+  padding: 0.1rem;
+  margin: 0.4rem;
+}
+
+.dateTimeRangePickerContent {
+  padding-top: 1rem;
+  min-height: 420px;
+}

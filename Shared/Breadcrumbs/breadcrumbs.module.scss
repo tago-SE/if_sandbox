@@ -1,0 +1,12 @@
+.menu {
+  top: calc(100% + 1rem);
+  left: 120%;
+  transform: translateX(-20%);
+  margin-left: 1rem;
+  &:before {
+    left: 12.5% !important;
+  }
+  &:after {
+    left: 12.5% !important;
+  }
+}

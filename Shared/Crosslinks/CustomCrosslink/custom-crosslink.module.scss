@@ -1,0 +1,87 @@
+@use "/src/styles/constants/color/color-variables.scss" as colors;
+
+p.customcrosslinkTitle > span,
+p.customcrosslinkTitle,
+p.customcrosslinkText > span,
+p.customcrosslinkText {
+  color: colors.$color-text-brown;
+}
+
+p.customcrosslinkTitle,
+p.customcrosslinkText {
+  margin-bottom: 12px;
+}
+
+.customicontop {
+  margin-bottom: 12px;
+}
+
+.customLinkWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin customcrosslink {
+  color: colors.$color-text-brown;
+  width: 100%;
+  max-width: 500px;
+  text-decoration: none;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  display: inline-block;
+  padding: 29px 30px;
+}
+
+.customcrosslinklight {
+  @include customcrosslink();
+  background-color: colors.$color-lighterBeige-background;
+}
+
+.customcrosslinkdark {
+  @include customcrosslink();
+  background-color: colors.$color-darkBeige-background;
+}
+
+a.customcrosslinkdark,
+a.customcrosslinklight {
+  text-decoration: none;
+  color: colors.$color-text-brown;
+}
+
+.custContainer {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(1, 100%);
+  justify-content: center;
+}
+
+.customIconWrapper {
+  transition: transform 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.customcrosslinklight:hover .customIconWrapper {
+  transform: translateX(13px);
+}
+
+.customStandaloneLink {
+  margin-right: 1rem;
+}
+
+.listItem {
+  background-color: colors.$color-lighterBeige-background;
+}
+
+@media screen and (min-width: 45rem) {
+  .custContainer {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 50%) !important;
+  }
+  .customLinkWrapper {
+    flex-direction: row;
+  }
+}

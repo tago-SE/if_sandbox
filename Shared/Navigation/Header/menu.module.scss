@@ -1,0 +1,188 @@
+// // Used
+// @import "src/styles/constants/color/color-variables.scss";
+// @import "src/styles/constants/util/util-variables.scss";
+// @import "src/styles/constants/breakpoint/breakpoint-variables.scss";
+// @import "src/styles/constants/typography/typography-variables.scss";
+
+// @import "~@if-design-system/core/src/scaffolding.scss"; // what does this even do?
+// // @import "~@if-design-system/util/src/variables.scss";
+// // @import "~@if-design-system/breakpoint/src/breakpoint-variables.scss";
+// @import "~@if-design-system/link/src/mixins/link.scss";
+// @import "~@if-design-system/util/src/mixins/util.scss";
+// @import "~@if-design-system/typography/src/mixins/typography.scss";
+
+// // @import "~@if-design-system/breakpoint/src/variables.scss";
+// @import "~@if-design-system/breakpoint/src/mixins/breakpoint.scss";
+// // @import "~@if-design-system/typography/src/typography-variables.scss";
+// // // //@import '@if-design-system/typography/src/font-face.scss';
+// // @import '@if-design-system/icons/src/mixins/product_icons.scss';
+// // @import '@if-design-system/icons/src/mixins/ui_icons.scss';
+// // @import '@if-design-system/icons/src/mixins/symbol_icons.scss';
+
+// // https://dev.azure.com/if-it/If%20Design%20Hub/_git/if-design-system?path=%2Fpackages%2Fglobal-header%2Fsrc%2Fglobal-header.scss
+
+// .if.holder .if.description {
+//   margin-top: 1rem;
+//   margin-bottom: 1rem;
+// }
+
+// .if.desktop.container .if.tertiary {
+//   padding-top: 0;
+// }
+
+// // Documentation navigation menu (left side)
+// .if.holder .if.crosslinks.buttons.two .if.showcase.leftSide {
+//   .if.description {
+//     padding-bottom: 10px;
+//   }
+//   & > ul.if {
+//     width: 100%;
+//     display: block;
+//     & > li.if {
+//       white-space: normal;
+//       margin-bottom: $spacing-size-16;
+//       line-height: 100%;
+//       list-style: none;
+//       & > a.if {
+//         @include link;
+//         white-space: normal;
+//         display: inline-block;
+//         @include textMeta;
+//         padding: 0;
+//         display: inline;
+//         min-height: 0;
+//         line-height: $spacing-size-20;
+//         &:hover,
+//         &.is-hovered {
+//           @include linkVisitedAndHovered;
+//           background-color: transparent;
+//           border: none;
+//           outline: none;
+//           box-shadow: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Documentation navigation menu (right side)
+// .if.tertiary .if.holder.primary {
+//   &:last-of-type {
+//     width: 33% !important;
+//     padding-left: 0px !important;
+//     // border: none;
+//     .if.description {
+//       border-bottom: 1pt solid $color-beige-background;
+//       padding-bottom: 10px;
+//     }
+//     .if.showcase {
+//       padding-left: 20px;
+//       padding-right: 20px;
+//       & > ul.if {
+//         width: 100%;
+//         display: block;
+//         & > li.if {
+//           // background-color: red;
+//           white-space: normal;
+//           margin-bottom: $spacing-size-16;
+//           line-height: 100%;
+//           list-style: none;
+//           & > a.if {
+//             @include link;
+//             white-space: normal;
+//             display: inline-block;
+//             @include textMeta;
+//             padding: 0;
+//             display: inline;
+//             min-height: 0;
+//             line-height: $spacing-size-20;
+//             &:hover,
+//             &.is-hovered {
+//               @include linkVisitedAndHovered;
+//               background-color: transparent;
+//               border: none;
+//               outline: none;
+//               box-shadow: none;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @keyframes fadeIn {
+//   0% {
+//     transform: translateY(-100%);
+//   }
+//   100% {
+//     // height: auto;
+//     transform: translateY(0);
+//     //
+//   }
+// }
+// .if.desktop.container {
+//   & .if.tertiary {
+//     // transition: all 1.0s cubic-bezier(0.4, 0, 0.2, 1);
+//     &.is-open {
+//       // position: absolute;
+//       // & > .if.container {
+//       //     display: flex;
+//       // }
+//       // animation: fadeIn 1.0s ease-in-out;
+//     }
+//   }
+// }
+
+// // .if.desktop.container .if.desktop-menu-item .if.tertiary.is-open {
+
+// //     &::before {
+// //         content: "";
+// //     }
+// //     &::after {
+// //         font-size: 1.4rem;
+// //         content: ">";
+// //         color: Orange;
+// //         line-height: 1.4rem;
+// //         border-top: 0;
+// //         border-right: 0;
+// //         border-bottom: 0;
+// //         border-left: 0;
+// //         vertical-align: middle;
+// //         transition: 2.0;
+// //       }
+
+// // }
+
+// // .if.global-header {
+// //     & .if.tertiary {
+// //       display: none;
+// //       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+// //       &.is-open {
+// //         background-color: red;
+// //         position: absolute;
+// //         background-color: $color-lightestBeige-background;
+// //         color: $color-brown-text;
+// //         position: absolute;
+// //         z-index: 99;
+// //         list-style: none;
+// //         width: 100vw;
+// //         max-width: 100vw;
+// //         left: 50%;
+// //         transform: translateX(-50%);
+// //         box-shadow: none;
+// //         border: none;
+// //         top: $spacing-size-100;
+// //         display: flex;
+// //         animation: none;
+// //         border-bottom: $color-lighterBeige-background;
+// //         margin: 0;
+// //         padding: 0;
+// //         padding-top: $spacing-size-40;
+// //         padding-bottom: $spacing-size-36;
+// //         & > .if.container {
+// //           display: flex;
+// //         }
+// //       }
+// //     }
+// //   }
